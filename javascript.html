@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+</head>
+
+<body>
+  <h1>Display All The Country Flags In Console</h1>
+  
+<script>
+ let dhamu = new XMLHttpRequest();
+ dhamu.open("GET","https://restcountries.com/v3.1/all");
+ dhamu.onreadystatechange = function(){
+   console.log(this.readyState);
+   let obj = JSON.parse(this.responseText)
+   console.log(obj[0].flags.png);
+   
+  //  
+ }
+ dhamu.send()
+</script>
+</body>
+</html>
